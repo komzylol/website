@@ -283,6 +283,63 @@ if (document.readyState === 'loading') {
     loadVideos();
 }
 
+// Auto-return to homepage after 30 seconds of inactivity
+let inactivityTimer;
+
+function resetInactivityTimer() {
+    // Clear existing timer
+    clearTimeout(inactivityTimer);
+    
+    // Set new timer for 30 seconds
+    inactivityTimer = setTimeout(() => {
+        // Close any open modals
+        closeAllModals();
+        
+        // Return to homepage
+        if (document.getElementById('detailSection').classList.contains('active')) {
+            goBack();
+        }
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 30000); // 30 seconds
+}
+
+// Function to close all modals
+function closeAllModals() {
+    const websiteModal = document.getElementById('websiteModal');
+    const videoModal = document.getElementById('videoModal');
+    const videoSelectionModal = document.getElementById('videoSelectionModal');
+    const adminModal = document.getElementById('adminModal');
+    
+    if (websiteModal && websiteModal.classList.contains('active')) {
+        closeWebsite();
+    }
+    
+    if (videoModal && videoModal.classList.contains('active')) {
+        closeVideo();
+    }
+    
+    if (videoSelectionModal && videoSelectionModal.classList.contains('active')) {
+        closeVideoSelection();
+    }
+    
+    if (adminModal && adminModal.classList.contains('active')) {
+        toggleAdminPanel();
+    }
+    
+    document.body.style.overflow = 'auto';
+}
+
+// Track user activity
+const activityEvents = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart', 'click'];
+activityEvents.forEach(function(eventName) {
+    document.addEventListener(eventName, resetInactivityTimer, true);
+});
+
+// Initialize timer when page loads
+resetInactivityTimer();
+
 // Toggle admin panel
 function toggleAdminPanel() {
     const modal = document.getElementById('adminModal');
