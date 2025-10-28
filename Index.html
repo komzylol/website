@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clerici Academy - Totem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="images/LOGO-clerici-academy_Tavola-disegno-1.png" alt="Clerici Academy Logo" class="header-logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Network Pattern Background -->
+        <div class="network-background">
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+        </div>
+
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="yellow-line"></div>
+            <p class="section-subtitle">Scegli il settore di interesse</p>
+            <h1 class="main-title">Benvenuto</h1>
+            <h1 class="main-title">Clerici Academy</h1>
+        </section>
+
+        <!-- Boxes Section -->
+        <section class="sectors-section">
+            <div class="sectors-container">
+                <div class="sector-box" data-sector="informatico">
+                    <div class="sector-icon-wrapper">
+                        <div class="sector-icon">
+                            <img src="images/informatico.jpg" alt="Informatico" class="sector-img">
+                        </div>
+                    </div>
+                    <h3 class="sector-title">Settore Informatico</h3>
+                    <div class="sector-overlay"></div>
+                </div>
+
+                <div class="sector-box" data-sector="pasti">
+                    <div class="sector-icon-wrapper">
+                        <div class="sector-icon">
+                            <img src="images/ristorazione.jpg" alt="Ristorazione" class="sector-img">
+                        </div>
+                    </div>
+                    <h3 class="sector-title">Settore di ristorazione</h3>
+                    <div class="sector-overlay"></div>
+                </div>
+
+                <div class="sector-box" data-sector="commerciale">
+                    <div class="sector-icon-wrapper">
+                        <div class="sector-icon">
+                            <img src="images/meccanico.jpg" alt="Meccanico" class="sector-img">
+                        </div>
+                    </div>
+                    <h3 class="sector-title">Settore meccanico</h3>
+                    <div class="sector-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- I nostri video Section -->
+        <section class="videos-section">
+            <div class="videos-container">
+                <h2 class="videos-title">I nostri video</h2>
+                <div class="videos-content">
+                    <div class="video-logo">
+                        <img src="images/LOGO-clerici-academy_Tavola-disegno-1.png" alt="Clerici Academy Logo" class="videos-logo-img">
+                    </div>
+                    <p class="videos-subtitle">Scopri di più sulla nostra offerta formativa</p>
+                    <button class="btn-video" onclick="showNextVideo()">
+                        Guarda i nostri video
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Panel Button -->
+        <button class="admin-toggle-btn" onclick="toggleAdminPanel()" title="Apri pannello amministratore">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.25-.74.25-1.53 0-2.28l-.91-.68a.98.98 0 0 1-.29-1.26l.89-1.54c.29-.5.11-1.15-.36-1.5l-1.2-.96c-.47-.35-1.14-.2-1.5.35l-.89 1.54a.98.98 0 0 1-1.26.29l-1.05-.68c-.71-.46-1.57-.46-2.28 0l-1.04.68a.98.98 0 0 1-1.26-.29l-.9-1.54c-.36-.55-1.03-.7-1.5-.35l-1.2.96c-.47.35-.65 1-.36 1.5l.89 1.54c.2.38.13.84-.29 1.26l-.91.68c-.74.25-1.53.25-2.28 0a.98.98 0 0 0-1.27.29l-.89 1.54c-.29.5-.11 1.15.36 1.5l1.2.96c.47.35 1.14.2 1.5-.35l.89-1.54a.98.98 0 0 1 1.26-.29l1.05.68c.71.46 1.57.46 2.28 0l1.04-.68c.38-.2.84-.13 1.26.29l.9 1.54c.36.55 1.03.7 1.5.35l1.2-.96c.47-.35.65-1 .36-1.5l-.89-1.54a.98.98 0 0 1 .29-1.26l.91-.68Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <!-- Admin Panel Modal -->
+        <div class="admin-modal" id="adminModal">
+            <div class="admin-modal-overlay" onclick="toggleAdminPanel()"></div>
+            <div class="admin-container">
+                <button class="admin-close-btn" onclick="toggleAdminPanel()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                        <path d="M11 10.586l6.293-6.293a1 1 0 111.414 1.414L12.414 12l6.293 6.293a1 1 0 01-1.414 1.414L11 13.414l-6.293 6.293a1 1 0 01-1.414-1.414L9.586 12 3.293 5.707a1 1 0 011.414-1.414L11 10.586z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <h3 class="admin-title">Pannello Amministratore</h3>
+                <div class="admin-form">
+                    <input type="text" id="videoTitleInput" placeholder="Titolo del video..." class="admin-input title-input">
+                    <input type="text" id="videoUrlInput" placeholder="Inserisci URL video Instagram..." class="admin-input">
+                    <button onclick="addVideo()" class="admin-btn-add">Aggiungi Video</button>
+                    <button onclick="clearAllVideos()" class="admin-btn-clear">Cancella Tutti i Video</button>
+                </div>
+                <div class="videos-list" id="videosList"></div>
+            </div>
+        </div>
+
+        <!-- Detail View Section -->
+        <section class="detail-section" id="detailSection">
+            <div class="detail-container">
+                <div class="detail-header">
+                    <div class="detail-icon-large">
+                        <img id="detailIcon" src="" alt="" class="detail-icon-img">
+                    </div>
+                    <h2 id="detailTitle" class="detail-title"></h2>
+                </div>
+                <div class="detail-content">
+                    <div id="detailDescription" class="detail-description"></div>
+                    <div class="detail-features">
+                        <h3>Caratteristiche principali:</h3>
+                        <ul id="detailFeatures" class="features-list"></ul>
+                    </div>
+                </div>
+                <button class="btn-back" onclick="goBack()">
+                    <span>←</span> Torna alla Home
+                </button>
+                <button class="btn-website" onclick="showWebsite()">
+                    Visita il sito del settore
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Website Modal -->
+    <div class="website-modal" id="websiteModal">
+        <div class="modal-overlay" onclick="closeWebsite()"></div>
+        <div class="modal-container">
+            <button class="btn-close" onclick="closeWebsite()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <path d="M11 10.586l6.293-6.293a1 1 0 111.414 1.414L12.414 12l6.293 6.293a1 1 0 01-1.414 1.414L11 13.414l-6.293 6.293a1 1 0 01-1.414-1.414L9.586 12 3.293 5.707a1 1 0 011.414-1.414L11 10.586z" fill="currentColor"/>
+                </svg>
+            </button>
+            <iframe id="websiteFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Video Selection Modal -->
+    <div class="website-modal" id="videoSelectionModal">
+        <div class="modal-overlay" onclick="closeVideoSelection()"></div>
+        <div class="video-selection-wrapper">
+            <button class="btn-close" onclick="closeVideoSelection()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <path d="M11 10.586l6.293-6.293a1 1 0 111.414 1.414L12.414 12l6.293 6.293a1 1 0 01-1.414 1.414L11 13.414l-6.293 6.293a1 1 0 01-1.414-1.414L9.586 12 3.293 5.707a1 1 0 011.414-1.414L11 10.586z" fill="currentColor"/>
+                </svg>
+            </button>
+            <h3 class="video-selection-title">I nostri video</h3>
+            <div class="video-selection-grid" id="videoSelectionGrid"></div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div class="website-modal" id="videoModal">
+        <div class="modal-overlay" onclick="closeVideo()"></div>
+        <div class="video-modal-wrapper">
+            <button class="btn-close" onclick="closeVideo()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <path d="M11 10.586l6.293-6.293a1 1 0 111.414 1.414L12.414 12l6.293 6.293a1 1 0 01-1.414 1.414L11 13.414l-6.293 6.293a1 1 0 01-1.414-1.414L9.586 12 3.293 5.707a1 1 0 011.414-1.414L11 10.586z" fill="currentColor"/>
+                </svg>
+            </button>
+            <div class="video-container">
+                <iframe id="videoFrame" src="" frameborder="0" scrolling="no" allowtransparency="true" allowfullscreen style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
