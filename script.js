@@ -66,6 +66,19 @@ const sectorInfo = {
             "Ricambi e supply chain",
             "Tecnologie automotive moderne"
         ]
+    },
+    servizicommerciali: {
+        title: "Servizi Commerciali",
+        icon: "images/paritario.jpg",
+        website: "https://www.clericiacademy.it/servizi-commerciali/",
+        description: "Istituto Professionale indirizzo Servizi Commerciali volto ad acquisire competenze nella realizzazione dei processi amministrativo-contabili e commerciali, promuovendo autonomia e responsabilità nell'ambito di una dimensione operativa aziendale.",
+        features: [
+            "Processi amministrativo-contabili",
+            "Tecnologie informatiche innovative",
+            "Comunicazione e marketing",
+            "Diritto ed Economia",
+            "Pianificazione e gestione aziendale"
+        ]
     }
 };
 
