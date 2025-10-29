@@ -157,7 +157,7 @@ body {
 
 .sectors-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
@@ -185,6 +185,10 @@ body {
 
 .sector-box:nth-child(3) {
     animation-delay: 0.3s;
+}
+
+.sector-box:nth-child(4) {
+    animation-delay: 0.4s;
 }
 
 /* Hover Effects */
@@ -1391,6 +1395,156 @@ body {
     .btn-back {
         padding: 12px 30px;
         font-size: 16px;
+    }
+}
+
+/* Footer Styles */
+.main-footer {
+    background: #1a237e;
+    width: 100%;
+    padding: 50px 20px 30px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-section {
+    flex-shrink: 0;
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-icon {
+    color: #fff;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.contact-text {
+    color: #fff;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-text div {
+    margin-bottom: 4px;
+}
+
+.footer-lower {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.institutional-codes {
+    color: #fff;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.institutional-codes div {
+    margin-bottom: 8px;
+}
+
+.institutional-codes div:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 40px 15px 25px;
+        margin-top: 60px;
+    }
+    
+    .footer-upper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-logo {
+        height: 60px;
+    }
+    
+    .footer-contact {
+        min-width: 100%;
+    }
+    
+    .contact-item {
+        gap: 12px;
+    }
+    
+    .contact-text {
+        font-size: 14px;
+    }
+    
+    .institutional-codes {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer {
+        padding: 30px 15px 20px;
+        margin-top: 40px;
+    }
+    
+    .footer-upper {
+        gap: 25px;
+    }
+    
+    .footer-logo {
+        height: 50px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .contact-icon {
+        margin-top: 0;
+    }
+    
+    .contact-text {
+        font-size: 13px;
+    }
+    
+    .institutional-codes {
+        font-size: 11px;
+        line-height: 1.6;
     }
 }
 
